@@ -45,3 +45,22 @@ Lab:
 ![image](https://user-images.githubusercontent.com/93296554/183049231-3a62c68c-7121-49a4-a330-b97378459806.png)
 ![image](https://user-images.githubusercontent.com/93296554/183049859-cb717a38-c28e-4a4d-a077-46d496cbbf01.png)
 
+
+
+
+
+DAY-3
+
+![image](https://user-images.githubusercontent.com/93296554/183249821-f9be73d9-7f8d-4fdf-831b-3ddc8497d218.png)
+
+![image](https://user-images.githubusercontent.com/93296554/183250317-8875eeac-065b-470a-b804-e2173031f333.png)
+![image](https://user-images.githubusercontent.com/93296554/183250478-874174f7-06e5-4d57-b5f1-cab4de905c1d.png)
+![image](https://user-images.githubusercontent.com/93296554/183251138-f09f97fd-f0ba-4a2d-a5c2-14e422efe97a.png)
+![image](https://user-images.githubusercontent.com/93296554/183256363-528a8086-8519-4ce4-a9b6-78da772e8600.png)
+
+
+
+![image](https://user-images.githubusercontent.com/93296554/183258331-1acd5cf8-969f-420c-9102-6fe0f443350d.png)
+
+
+
