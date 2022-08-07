@@ -15,12 +15,8 @@ GDSII Streaming
 
 About Google SkyWater PDK
 
-
-
-
-
-
 Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
+./flow.tcl is the script which runs the OpenLANE flow and -interactive starts the flow in the interactive mode. 
 ![image](https://user-images.githubusercontent.com/93296554/183036477-9219a889-10ad-4cf0-b04c-30626fde92a9.png)
 ![image](https://user-images.githubusercontent.com/93296554/183043895-e6437db4-f2d1-4885-af0d-4bdd7d907f5d.png)
 
@@ -60,13 +56,51 @@ DAY-3
 ![image](https://user-images.githubusercontent.com/93296554/183256363-528a8086-8519-4ce4-a9b6-78da772e8600.png)
 
 
+![image](https://user-images.githubusercontent.com/93296554/183291873-fd1047dd-b0fe-40a1-bf72-f5ff73338c45.png)
 
-![image](https://user-images.githubusercontent.com/93296554/183258331-1acd5cf8-969f-420c-9102-6fe0f443350d.png)
 
 
 DAY 4
 grid for routing using info file
+
+
 ![image](https://user-images.githubusercontent.com/93296554/183281052-fc4b1ed6-ad98-4369-a534-8bdf704139ad.png)
+
+
+![image](https://user-images.githubusercontent.com/93296554/183291930-4a68474e-8b38-4abf-9b11-140d22ef6160.png)
+
+![image](https://user-images.githubusercontent.com/93296554/183292049-023c6d7c-db4a-483a-9ec7-ee908b6feade.png)
+
+DAY 5
+
+run_routing
+![image](https://user-images.githubusercontent.com/93296554/183292114-4ac1f7fb-b950-4952-9062-0a8a0b14821d.png)
+![image](https://user-images.githubusercontent.com/93296554/183292171-c04916dd-380c-4680-90de-cb1e9782cf09.png)
+![image](https://user-images.githubusercontent.com/93296554/183292197-3277da3d-dae6-492e-b6fc-c18343461c68.png)
+
+
+
+
+![image](https://user-images.githubusercontent.com/93296554/183291977-fcbb0418-96c9-464b-9c79-a31230033bc3.png)
+
+Use the following commands before creating the power distribution network :
+ openroad
+ read_db picorv32_cts.db  
+ read_liberty $::env(LIB_SYNTH_COMPLETE) 
+ link_design picorv32a
+ read_sdc ...../src/my_base.sdc
+ set_propagated_clock [all_clocks]
+ report_checks -path_delay min_max -format full_clock_expanded -digits 4
+ 
+For generating the power distribution network we use the following command :
+gen_pdn
+
+after routing design in magic:
+![image](https://user-images.githubusercontent.com/93296554/183292309-0f415fe5-9ec7-46cc-9c20-a9fb7be27a00.png)
+
+
+
+
 
 
 
