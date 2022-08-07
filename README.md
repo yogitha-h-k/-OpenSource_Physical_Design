@@ -44,6 +44,7 @@ Lab:
 
 ![image](https://user-images.githubusercontent.com/93296554/183049231-3a62c68c-7121-49a4-a330-b97378459806.png)
 ![image](https://user-images.githubusercontent.com/93296554/183049859-cb717a38-c28e-4a4d-a077-46d496cbbf01.png)
+![image](https://user-images.githubusercontent.com/93296554/183291764-db966abb-17e5-44c4-baac-adfed294c525.png)
 
 
 
@@ -61,6 +62,11 @@ DAY-3
 
 
 ![image](https://user-images.githubusercontent.com/93296554/183258331-1acd5cf8-969f-420c-9102-6fe0f443350d.png)
+
+
+DAY 4
+grid for routing using info file
+![image](https://user-images.githubusercontent.com/93296554/183281052-fc4b1ed6-ad98-4369-a534-8bdf704139ad.png)
 
 
 
