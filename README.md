@@ -21,6 +21,8 @@ step-1:./flow.tcl is the script which runs the OpenLANE flow and -interactive st
 step2 :imprting openlane packages:package require openlane 0.9
 step3:preparing the design:prep -design picorv32a
 step4:run_synthesis(the design is synthesised!)
+
+
 ![image](https://user-images.githubusercontent.com/93296554/183043895-e6437db4-f2d1-4885-af0d-4bdd7d907f5d.png)
 
 
@@ -29,15 +31,46 @@ step4:run_synthesis(the design is synthesised!)
 Flop percentage=10.84%(no of dflops/total number of cells)
 
 DAY 2- Good floorplan vs bad floorplan and introduction to library cells
+Chip Floorplanning:
+The placement of logical blocks, library cells, and pins on a silicon chip is known as chip floorplanning. The allocation is completed to fit the given space and aspect ratio.
 
+Utilization Factor and Aspect Ratio:
+Utilization Factor is a measure of how much of the entire core area is used by standard cells.
+
+Power Planning:
+Power planning is done to set up a network for the cell's supply of power.
+The undesired voltage drop and ground bounce are rectified in this stage.
+
+Pin Placement:
+Pin placement is a important part of floorplanning as the timing delays and number of buffers required is dependent on the position of the pin.
 ![image](https://user-images.githubusercontent.com/93296554/183027044-85a85d29-1397-42a8-8e89-fbf258de59a5.png)
+
+Noise margin should be considered as interconnects have certain L and R.Hence the use of Decouple capacitors.
 ![image](https://user-images.githubusercontent.com/93296554/183028188-206fd7bf-4734-4339-98f9-8e1f1fc47831.png)
+
+Arragement of blocks along with Decouple capacitors:
+
 ![image](https://user-images.githubusercontent.com/93296554/183028919-5b035f1a-75e3-4761-bbe6-956070978488.png)
+
+
 Lab:
+
+technology file|merged LEF file|DEF File are used here.
 ![image](https://user-images.githubusercontent.com/93296554/183049382-6dabe73e-ddd5-405d-b903-31e4eb3f756f.png)
 
+Magic tool is used to vizualize the layout of the floorplan.
 ![image](https://user-images.githubusercontent.com/93296554/183049231-3a62c68c-7121-49a4-a330-b97378459806.png)
+
 ![image](https://user-images.githubusercontent.com/93296554/183049859-cb717a38-c28e-4a4d-a077-46d496cbbf01.png)
+
+
+PLACEMET:run_placement
+Placement uses the DEF file produced during floorplan as an input. In OpenLANE, placement happens in two steps:
+
+Global Placement
+Detailed Placement
+![image](https://user-images.githubusercontent.com/93296554/183334581-e19faf71-da39-4e07-ac65-46caaaad9c6e.png)
+
 ![image](https://user-images.githubusercontent.com/93296554/183291764-db966abb-17e5-44c4-baac-adfed294c525.png)
 
 
