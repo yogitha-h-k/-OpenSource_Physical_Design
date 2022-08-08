@@ -132,8 +132,11 @@ This is the lef file that was created and describes the ports of the layout.
 
 
 ![image](https://user-images.githubusercontent.com/93296554/183350855-9642a690-9281-4d2a-81ac-3335be9baf69.png)
-area with delay:0:196832.720![image](https://user-images.githubusercontent.com/93296554/183350913-f049d95a-264c-4f4a-a939-e0a608ef8e7a.png)
-area with delay = 1: 209181.872![image](https://user-images.githubusercontent.com/93296554/183351016-87d6300c-3369-4fc1-873c-ee4c58428405.png)
+area with delay:0:196832.720
+area with delay = 1: 209181.872
+
+![image](https://user-images.githubusercontent.com/93296554/183350913-f049d95a-264c-4f4a-a939-e0a608ef8e7a.png)
+![image](https://user-images.githubusercontent.com/93296554/183351016-87d6300c-3369-4fc1-873c-ee4c58428405.png)
 
 STATIC TIMMING ANALYSIS:
 
@@ -203,32 +206,39 @@ The OpenLANE command used to run CTS:run_cts
 
 DAY 5
 
+Run pdn power distribution network
+
+gen_pdn
+
+power and ground to std cells
+![image](https://user-images.githubusercontent.com/93296554/183362583-94c10b19-3f77-4c49-a1ae-80a7e129f77e.png)
+
+Routing
+Routing is done with TritonRoute. For the global routing fastroute is used and for detailed routing TritonRoute is used.
+Global routing divides the pins into squares in order to initially construct a route to the square, which is done while detailed routing is being carried out.
+This can be done with the following command:
 run_routing
-![image](https://user-images.githubusercontent.com/93296554/183292114-4ac1f7fb-b950-4952-9062-0a8a0b14821d.png)
-![image](https://user-images.githubusercontent.com/93296554/183292171-c04916dd-380c-4680-90de-cb1e9782cf09.png)
-![image](https://user-images.githubusercontent.com/93296554/183292197-3277da3d-dae6-492e-b6fc-c18343461c68.png)
+![image](https://user-images.githubusercontent.com/93296554/183363624-5f0c67b7-78c6-429b-8909-f1eac81809b7.png)
+
+after routing design in magic:
+![image](https://user-images.githubusercontent.com/93296554/183292309-0f415fe5-9ec7-46cc-9c20-a9fb7be27a00.png)
+
 
 
 
 
 ![image](https://user-images.githubusercontent.com/93296554/183291977-fcbb0418-96c9-464b-9c79-a31230033bc3.png)
 
-Use the following commands before creating the power distribution network :
- openroad
- read_db picorv32_cts.db  
- read_liberty $::env(LIB_SYNTH_COMPLETE) 
- link_design picorv32a
- read_sdc ...../src/my_base.sdc
- set_propagated_clock [all_clocks]
- report_checks -path_delay min_max -format full_clock_expanded -digits 4
- 
-For generating the power distribution network we use the following command :
-gen_pdn
-
-after routing design in magic:
-![image](https://user-images.githubusercontent.com/93296554/183292309-0f415fe5-9ec7-46cc-9c20-a9fb7be27a00.png)
 
 
+
+
+
+
+
+
+
+U
 
 
 
