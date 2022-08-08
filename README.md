@@ -123,6 +123,7 @@ DAY 4:
 ![image](https://user-images.githubusercontent.com/93296554/183347790-a7ee3e8f-4302-402f-a969-9e0210550644.png)
 
  setting grid for routing by using the above values (using info file)
+ ![image](https://user-images.githubusercontent.com/93296554/183281052-fc4b1ed6-ad98-4369-a534-8bdf704139ad.png)
  
  To create the lef file:lef write
 This is the lef file that was created and describes the ports of the layout.
@@ -130,8 +131,71 @@ This is the lef file that was created and describes the ports of the layout.
 ![image](https://user-images.githubusercontent.com/93296554/183349935-87c13a14-00fe-4a00-bfad-8f1157a9ea24.png)
 
 
+![image](https://user-images.githubusercontent.com/93296554/183350855-9642a690-9281-4d2a-81ac-3335be9baf69.png)
+area with delay:0:196832.720![image](https://user-images.githubusercontent.com/93296554/183350913-f049d95a-264c-4f4a-a939-e0a608ef8e7a.png)
+area with delay = 1: 209181.872![image](https://user-images.githubusercontent.com/93296554/183351016-87d6300c-3369-4fc1-873c-ee4c58428405.png)
 
-![image](https://user-images.githubusercontent.com/93296554/183281052-fc4b1ed6-ad98-4369-a534-8bdf704139ad.png)
+STATIC TIMMING ANALYSIS:
+
+![image](https://user-images.githubusercontent.com/93296554/183351851-523d7806-2072-4a89-8249-ed405269284e.png)
+
+The following code needs to be written to a file called pre_sta.conf inside openlane dir:
+
+set_cmd_units -time ns -capacitance pf -current mA -voltage V -resistance kOhm -distance um
+read_liberty -max ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/sky130_fd_sc_hd__slow.lib
+read_liberty -min ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/sky130_fd_sc_hd__fast.lib
+read_verilog /home/mariosurfe91/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/lab2/results/synthesis/picorv32a.synthesis.v
+link_design picorv32a
+read_sdc ~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/src/my_base.sdc
+report_checks -path_delay min_max -fields {slew trans net cap input_pin}
+report_tns
+report_wns
+
+Copy the following sdc example file out of scripts.
+
+set ::env(CLOCK_PORT) clk
+set ::env(CLOCK_PERIOD) 12.000
+set ::env(SYNTH_DRIVING_CELL) sky130_fd_sc_hd__inv_8
+set ::env(SYNTH_DRIVING_CELL_PIN) Y
+set ::env(SYNTH_CAP_LOAD) 17.65
+set ::env(SYNTH_MAX_FANOUT) 4
+
+set IO_PCT 0.2
+create_clock [get_ports $::env(CLOCK_PORT)]  -name $::env(CLOCK_PORT)  -period $::env(CLOCK_PERIOD)
+set input_delay_value [expr $::env(CLOCK_PERIOD) * $IO_PCT]
+set output_delay_value [expr $::env(CLOCK_PERIOD) * $IO_PCT]
+
+![image](https://user-images.githubusercontent.com/93296554/183352342-4d9e0362-f766-4b7e-a832-4b6adfcce8ae.png)
+
+static timing analysis inside opnelane flow.tcl
+execute command openroad and the follwing commands:
+
+
+openroad
+read_lef /openLANE_flow/designs/picorv32a/runs/lab2/tmp/merged.lef
+read_def /openLANE_flow/designs/picorv32a/runs/lab2/results/cts/picorv32a.cts.def
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/lab3/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty -min $::env(LIB_FASTEST)
+read_sdc /openLANE_flow/designs/picorv32a/src/my_base.sdc
+set_propagated_clock [all_clocks]
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+
+![image](https://user-images.githubusercontent.com/93296554/183354342-320f1fa2-f5b4-4410-92e3-18c9981a6312.png)
+
+
+Clock Tree Synthesis using TritonCTS
+
+With OpenLANE, the TritonCTS tool is used to create clock trees. As CTS is conducted on a placement, it should always be done after floor layout and placement. def file produced during the placement phase.
+
+
+The OpenLANE command used to run CTS:run_cts
+
+
+
+
+
 
 
 !
