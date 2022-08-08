@@ -87,11 +87,17 @@ LDD-Lightly doped drain(concept of P+,P- and N+,N-)
 ![image](https://user-images.githubusercontent.com/93296554/183250478-874174f7-06e5-4d57-b5f1-cab4de905c1d.png)
 
 Final design to fabricate after 16 mask layers
+
 ![image](https://user-images.githubusercontent.com/93296554/183251138-f09f97fd-f0ba-4a2d-a5c2-14e422efe97a.png)
 
 
 Magic Tool offers a very user-friendly interface for designing the different layers of the layout. Additionally, it includes  DRC check fetaure. The  below displays a CMOS Inverter configuration.
+
+
 ![image](https://user-images.githubusercontent.com/93296554/183249821-f9be73d9-7f8d-4fdf-831b-3ddc8497d218.png)
+
+
+
 Extract SPICE Netlist from Standard Cell Layout:
 Extract the circuit from the layout design.
 extract all
@@ -103,6 +109,11 @@ ext2spice
 
 
 ![image](https://user-images.githubusercontent.com/93296554/183335891-d0e0a025-2ecc-4e15-bbf7-a4177bc256a2.png)
+
+
+
+The waveform of the inverter's output relative to input is depicted in the figure below. This waveform is used to determine a number of timing metrics, including rise time delay, fall time delay, and propagation delay.
+
 
 ![image](https://user-images.githubusercontent.com/93296554/183291873-fd1047dd-b0fe-40a1-bf72-f5ff73338c45.png)
 
