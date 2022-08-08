@@ -118,17 +118,23 @@ The waveform of the inverter's output relative to input is depicted in the figur
 ![image](https://user-images.githubusercontent.com/93296554/183291873-fd1047dd-b0fe-40a1-bf72-f5ff73338c45.png)
 
 
-DAY 4
-grid for routing using info file
+DAY 4:
+
+![image](https://user-images.githubusercontent.com/93296554/183347790-a7ee3e8f-4302-402f-a969-9e0210550644.png)
+
+ setting grid for routing by using the above values (using info file)
+ 
+ To create the lef file:lef write
+This is the lef file that was created and describes the ports of the layout.
+
+![image](https://user-images.githubusercontent.com/93296554/183349935-87c13a14-00fe-4a00-bfad-8f1157a9ea24.png)
+
 
 
 ![image](https://user-images.githubusercontent.com/93296554/183281052-fc4b1ed6-ad98-4369-a534-8bdf704139ad.png)
 
 
-![image](https://user-images.githubusercontent.com/93296554/183291930-4a68474e-8b38-4abf-9b11-140d22ef6160.png)
-
-![image](https://user-images.githubusercontent.com/93296554/183292049-023c6d7c-db4a-483a-9ec7-ee908b6feade.png)
-
+!
 DAY 5
 
 run_routing
