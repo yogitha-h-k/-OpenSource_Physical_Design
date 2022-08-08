@@ -197,9 +197,6 @@ The OpenLANE command used to run CTS:run_cts
 
 
 
-
-
-
 ![image](https://user-images.githubusercontent.com/93296554/183356080-9e896b16-9167-4687-88a6-7496215557ae.png)
 
 ![image](https://user-images.githubusercontent.com/93296554/183356164-a77e86bd-0792-4eee-b2b1-70f4275ec8ab.png)
@@ -221,14 +218,11 @@ run_routing
 ![image](https://user-images.githubusercontent.com/93296554/183363624-5f0c67b7-78c6-429b-8909-f1eac81809b7.png)
 
 after routing design in magic:
+
+
 ![image](https://user-images.githubusercontent.com/93296554/183292309-0f415fe5-9ec7-46cc-9c20-a9fb7be27a00.png)
 
-
-
-
-
-![image](https://user-images.githubusercontent.com/93296554/183291977-fcbb0418-96c9-464b-9c79-a31230033bc3.png)
-
+![image](https://user-images.githubusercontent.com/93296554/183364430-cc9af47b-120b-4b9a-8c6f-7ba32fb40f79.png)
 
 
 
@@ -238,9 +232,20 @@ after routing design in magic:
 
 
 
-U
 
 
+
+
+
+MAIN STEPS:
+package require openlane 0.9
+prep -design <design> -tag <tag> -overwrtie
+run_synthesis
+run_floorplan
+run_placement
+run_cts
+gen_pdn
+run_routing
 
 
 
