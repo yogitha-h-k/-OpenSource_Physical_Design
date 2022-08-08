@@ -15,22 +15,20 @@ GDSII Streaming
 
 About Google SkyWater PDK
 
-Day 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
-./flow.tcl is the script which runs the OpenLANE flow and -interactive starts the flow in the interactive mode. 
+DAY 1 - Inception of open-source EDA, OpenLANE and Sky130 PDK
+step-1:./flow.tcl is the script which runs the OpenLANE flow and -interactive starts the flow in the interactive mode. 
 ![image](https://user-images.githubusercontent.com/93296554/183036477-9219a889-10ad-4cf0-b04c-30626fde92a9.png)
+step2 :imprting openlane packages:package require openlane 0.9
+step3:preparing the design:prep -design picorv32a
+step4:run_synthesis(the design is synthesised!)
 ![image](https://user-images.githubusercontent.com/93296554/183043895-e6437db4-f2d1-4885-af0d-4bdd7d907f5d.png)
 
+
 ![image](https://user-images.githubusercontent.com/93296554/183045846-e2e93650-a109-4a27-9664-d6f4f90ec7eb.png)
-Flop percentage=10.84%
 
+Flop percentage=10.84%(no of dflops/total number of cells)
 
-
-
-
-
-Day 2 - Good floorplan vs bad floorplan and introduction to library cells
-
-
+DAY 2- Good floorplan vs bad floorplan and introduction to library cells
 
 ![image](https://user-images.githubusercontent.com/93296554/183027044-85a85d29-1397-42a8-8e89-fbf258de59a5.png)
 ![image](https://user-images.githubusercontent.com/93296554/183028188-206fd7bf-4734-4339-98f9-8e1f1fc47831.png)
