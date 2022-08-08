@@ -197,8 +197,10 @@ The OpenLANE command used to run CTS:run_cts
 
 
 
+![image](https://user-images.githubusercontent.com/93296554/183356080-9e896b16-9167-4687-88a6-7496215557ae.png)
 
-!
+![image](https://user-images.githubusercontent.com/93296554/183356164-a77e86bd-0792-4eee-b2b1-70f4275ec8ab.png)
+
 DAY 5
 
 run_routing
