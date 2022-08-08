@@ -224,6 +224,8 @@ after routing design in magic:
 
 ![image](https://user-images.githubusercontent.com/93296554/183364430-cc9af47b-120b-4b9a-8c6f-7ba32fb40f79.png)
 
+SPEF FILE:
+![image](https://user-images.githubusercontent.com/93296554/183365919-7a268803-3a5d-4bf4-8c12-604bdcaa84fb.png)
 
 
 
