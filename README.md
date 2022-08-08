@@ -43,6 +43,8 @@ The undesired voltage drop and ground bounce are rectified in this stage.
 
 Pin Placement:
 Pin placement is a important part of floorplanning as the timing delays and number of buffers required is dependent on the position of the pin.
+
+
 ![image](https://user-images.githubusercontent.com/93296554/183027044-85a85d29-1397-42a8-8e89-fbf258de59a5.png)
 
 Noise margin should be considered as interconnects have certain L and R.Hence the use of Decouple capacitors.
@@ -76,19 +78,33 @@ Detailed Placement
 
 
 
+DAY-3-Design library cell using Magic Layout and ngspice characterization
 
-DAY-3
-
-![image](https://user-images.githubusercontent.com/93296554/183249821-f9be73d9-7f8d-4fdf-831b-3ddc8497d218.png)
-
+How polysilicon is placed using photolithography:
 ![image](https://user-images.githubusercontent.com/93296554/183250317-8875eeac-065b-470a-b804-e2173031f333.png)
+
+LDD-Lightly doped drain(concept of P+,P- and N+,N-)
 ![image](https://user-images.githubusercontent.com/93296554/183250478-874174f7-06e5-4d57-b5f1-cab4de905c1d.png)
+
+Final design to fabricate after 16 mask layers
 ![image](https://user-images.githubusercontent.com/93296554/183251138-f09f97fd-f0ba-4a2d-a5c2-14e422efe97a.png)
+
+
+Magic Tool offers a very user-friendly interface for designing the different layers of the layout. Additionally, it includes  DRC check fetaure. The  below displays a CMOS Inverter configuration.
+![image](https://user-images.githubusercontent.com/93296554/183249821-f9be73d9-7f8d-4fdf-831b-3ddc8497d218.png)
+Extract SPICE Netlist from Standard Cell Layout:
+Extract the circuit from the layout design.
+extract all
+Convert the extracted circuit to SPICE model.
+ext2spice cthresh 0 rthresh 0
+ext2spice
+
 ![image](https://user-images.githubusercontent.com/93296554/183256363-528a8086-8519-4ce4-a9b6-78da772e8600.png)
 
 
-![image](https://user-images.githubusercontent.com/93296554/183291873-fd1047dd-b0fe-40a1-bf72-f5ff73338c45.png)
+![image](https://user-images.githubusercontent.com/93296554/183335891-d0e0a025-2ecc-4e15-bbf7-a4177bc256a2.png)
 
+![image](https://user-images.githubusercontent.com/93296554/183291873-fd1047dd-b0fe-40a1-bf72-f5ff73338c45.png)
 
 
 DAY 4
